@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rubypaper.board.persistence.JoinDao">
+
+<select id="join1"  parameterType="com.rubypaper.domain.JoinVO"
+                          resultType="com.rubypaper.domain.JoinVO" >
+ <![CDATA[
+   select * from member1026 m join board1026 b on m.id = b.writer 
+ ]]>
+</select>
+
+<select id="join2"  parameterType="com.rubypaper.domain.JoinVO"
+                          resultType="com.rubypaper.domain.JoinVO" >
+ <![CDATA[
+   select * from member1026 m join board1026 b on m.id = b.writer where m.id = #{id}
+ ]]>
+</select>
+
+<select id="join3"  parameterType="com.rubypaper.domain.JoinVO"
+                          resultType="com.rubypaper.domain.JoinVO" >
+ <![CDATA[
+   select * from member1026 m join board1026 b on m.id = b.writer where b.seq = #{seq}
+ ]]>
+</select>
+
+
+</mapper>

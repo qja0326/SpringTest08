@@ -1,0 +1,22 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div align="center">
+<br>
+<h2> 상세 보기 <a href=index.html>(처음으로)</a> </h2>
+
+<form  action=update.do>
+<table border=1>
+<tr><td> 제목</td>     <td> <input  type=text name=title    /> </tr>
+<tr><td> 작성자 </td>    <td> <input  type=text name=writer    /></tr>
+<tr><td> 내용 </td>   <td> <input  type=text name=content  /> </tr>
+<tr> <td colspan=2  align="center"><input  type=submit  th:value="저장하기" /></td> </tr>
+</table>
+</form>
+
+</div>
+</body>
+</html>
